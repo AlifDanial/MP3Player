@@ -2,17 +2,112 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playbutton"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#1b1b1b"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="40dp"
+        android:background="#1b1b1b"
+        android:onClick="onClickPause"
+        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/pause" />
+
+    <ImageButton
+        android:id="@+id/stopButton"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="40dp"
+        android:background="#1b1b1b"
+        android:onClick="onClickStop"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/stop" />
+
+    <ImageButton
+        android:id="@+id/playButton"
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:layout_marginEnd="184dp"
+        android:layout_marginBottom="40dp"
+        android:background="#1b1b1b"
+        android:onClick="onClickPlay"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/play" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="230dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@android:style/Widget.DeviceDefault.Light.SeekBar"
+        android:layout_width="380dp"
+        android:layout_height="9dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="132dp"
+        android:progressTint="@android:color/background_light"
+        android:thumbTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/progressText"
+        android:layout_width="59dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="100dp"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/durationText"
+        android:layout_width="59dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="100dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/songName"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="180dp"
+        android:textAlignment="viewStart"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
